@@ -21,13 +21,26 @@ def menu1():
         print("Hello! Welcome to the climate data lookup tool. ")
         print("This tool will display some weather statistics for")
         print("a location. ")
-        print("Press 5 to quit at any time.  ")
-        print("First off, please select your location (1-3):")
+        print("New feature! We now have snow data for each location.")
+        print("First off, please select your location (1-3). You may")
+        print("also enter the letters of the station:")
         print("1 - KIAD - Dulles Airport")
         print("2 - KORD - Chicago O'Hare")
         print("3 - KSFO - San Francisco Airport")
-        print("5 - Exit program")
-        weatherStation = int(input('Enter a selection (1-3): '))
+        print("4 - Exit program")
+        temp = input('Enter a selection (1-4): ')
+        if(temp == "KIAD"):
+            weatherStation = 1
+        elif(temp == "KORD"):
+            weatherStation = 2
+        elif(temp == "KSFO"):
+            weatherStation = 3
+        elif(temp == "4"):
+            print("Do you really want to quit? ")
+            input("Press Enter to quit...")
+            os.quit
+        else:
+            weatherStation = int(temp)
         st = str(weatherStation)
 
         selectMode()
@@ -82,6 +95,8 @@ def tempDataMenu():
     elif(temperatureSelection == 4):
         return
     elif (temperatureSelection == 5):
+        print("Do you really want to quit? ")
+        input("Press Enter to quit...")
         os.quit
     tempDataMenu()
 

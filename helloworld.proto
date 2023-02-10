@@ -1,0 +1,93 @@
+// Copyright 2015 gRPC authors.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc MaxTemp (MaxTempRequest) returns (MaxTempReply) {}
+  rpc MinTemp (MinTempRequest) returns (MinTempReply) {}
+  rpc DaysBelowFreezing (DaysBelowFreezingRequest) returns (DaysBelowFreezingReply) {}
+  rpc MaxWindGust (MaxWindGustRequest) returns (MaxWindGustReply) {}
+  rpc WindyDays (WindyDaysRequest) returns (WindyDaysReply) {}
+  rpc AvgDailyPrecip (AvgDailyPrecipRequest) returns (AvgDailyPrecipReply) {}
+  rpc AnnualSnowDepth (AnnualSnowDepthRequest) returns (AnnualSnowDepthReply) {}
+  rpc AnnualRainfall (AnnualRainfallRequest) returns (AnnualRainfallReply) {}
+}
+
+
+message HelloRequest {
+  string name = 1;
+}
+message MaxTempRequest {
+  string name = 1;
+}
+message MinTempRequest {
+  string name = 1;
+}
+message DaysBelowFreezingRequest {
+  string name = 1;
+}
+message MaxWindGustRequest {
+  string name = 1;
+}
+message WindyDaysRequest {
+  string name = 1;
+}
+message AvgDailyPrecipRequest {
+  string name = 1;
+}
+message AnnualSnowDepthRequest {
+  string name = 1;
+}
+message AnnualRainfallRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+message MaxTempReply {
+  string message = 1;
+}
+message MinTempReply {
+  string message = 1;
+}
+message DaysBelowFreezingReply {
+  string message = 1;
+}
+message MaxWindGustReply {
+  string message = 1;
+}
+message WindyDaysReply {
+  string message = 1;
+}
+message AvgDailyPrecipReply {
+  string message = 1;
+}
+message AnnualSnowDepthReply {
+  string message = 1;
+}
+message AnnualRainfallReply {
+  string message = 1;
+}

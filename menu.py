@@ -38,7 +38,6 @@ def menu1():
         elif(temp == "4"):
             print("Do you really want to quit? ")
             input("Press Enter to quit...")
-            os.quit
         else:
             weatherStation = int(temp)
         st = str(weatherStation)
@@ -84,13 +83,13 @@ def tempDataMenu():
     print("4 - Return to Main Menu")
     temperatureSelection = int(input("Enter a selection (1-4): "))
     if(temperatureSelection == 1):
-        print("The record low temperature for ",weatherStation," is ", recordLow,"F.")
+        print("The record low temperature for ",wxStations[st]," is ", recordLow,"F.")
         input("Press Enter to continue...")
     elif(temperatureSelection == 2):
-        print("The record high temperature for ",weatherStation," is", recordHigh,"F.")
+        print("The record high temperature for ",wxStations[st]," is", recordHigh,"F.")
         input("Press Enter to continue...")
     elif(temperatureSelection == 3):
-        print("The annual days below freezing for ",weatherStation," is", daysBelowFreezing," days.")
+        print("The annual days below freezing for ",wxStations[st]," is", daysBelowFreezing," days.")
         input("Press Enter to continue...")
     elif(temperatureSelection == 4):
         return

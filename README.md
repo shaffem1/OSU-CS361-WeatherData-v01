@@ -37,4 +37,5 @@ The following line of code stores the data from the response method in a variabl
 
 
 
+![cs361-uml-diagram](https://user-images.githubusercontent.com/29556835/218222175-d4ccd431-8e33-4b93-9c74-2bd56a7e5dae.jpg)
 
